@@ -1,7 +1,7 @@
 # Maintainer: Emmanuel Gil Peyrot <linkmauve@linkmauve.fr>
 
 pkgname=kaidan-git
-pkgver=r235.b8190ef
+pkgver=r299.8b4fc2d
 pkgrel=1
 pkgdesc="Simple and user-friendly Jabber/XMPP client for every device"
 arch=('i686' 'x86_64')
@@ -26,7 +26,7 @@ prepare() {
 
 build() {
   cd "$srcdir/kaidan/build"
-  cmake -DCMAKE_BUILD_TYPE=Release -DI18N=ON ..
+  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DI18N=ON ..
   make
 }
 
